@@ -52,7 +52,7 @@ if(!password_verify($senha, $result['data'][0]->senha)){
 }
 
 //define a sessão do usuário
-$_SESSION['usuario'] = $result['data'][0]-> usuario;
+$_SESSION['usuario'] = $result['data'][0];
 
 //redirecionar para a página inicial
 header('Location: index.php?rota=home');

@@ -42,6 +42,18 @@ switch ($rota){
             break;    
 }
 
+//carregamento de scripts permanentes
+require_once __DIR__ . "/../inc/config.php";
+require_once __DIR__ . "/../inc/database.php";
+
+//teste
+$db = new database();
+$usuarios = $db->query('SELECT * FROM usuarios');
+echo '<pre>';
+print_r($usuarios);
+echo '</pre>';
+die();
+
 // apresentação da página
 require_once __DIR__ . "/../inc/header.php";
 require_once __DIR__ . "/../scripts/$script";
